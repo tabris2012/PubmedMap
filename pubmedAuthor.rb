@@ -19,10 +19,10 @@ get_web_flag = false #デバッグ用ウェブ検索フラグ
 search_words = "diabetes insulin clearance"
 web_abst = WebAbstract.new() #検索オブジェクト展開
 #論文検索し、筆者リストを得る
-#author_list = web_abst.webAuthorsByWords(search_words)
+author_list = web_abst.webAuthorsByWords(search_words)
 # {Author name, 出現回数},...
-
-got_xml = open("./data/testSearch.xml", "r").read
+#既に検索済みならxmlからロード
+#got_xml = open("./data/testSearch.xml", "r").read
 author_list = web_abst.parseXMLtoAuthors(got_xml)
 author_list = author_list.sort{|a,b| b[1] <=> a[1]} #出現数順に並び替え
 

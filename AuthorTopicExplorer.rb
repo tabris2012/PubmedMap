@@ -5,7 +5,7 @@ class AuthorTopicExplorer
   def initialize(dir_name, author_hash = Hash.new)
     @make_dir = dir_name #トピック分けを保存するディレクトリ名
     @author_hash = author_hash #トピック分けする筆者リスト
-    @load_words_limit = 20 #読込む単語数
+    @load_words_limit = 100 #トピック分類に使用する単語数
     @min_topics = 3 #最小トピック数
     @max_topics = 8 #最大トピック数
     @author_topic = "/Users/tabris2012/local/LDA-master/author_topic" #author_topicプログラムの場所
